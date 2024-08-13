@@ -1,16 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="style.css">
-
-<div id="menu">
-    <div id="menu-items">
-        <a href="/" class="menu-item"> Projects </a>
-        <a href="/" class="menu-item"> About</a>
-        <a href="/" class="menu-item"> Extra </a>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Left Bar Button -->
+    <div class="topnav">
+        <a class="active" href="#home">mixtape.io</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#other">Other</a>
+      </div>
     </div>
     <div id="menu-background-pattern"></div>
-</div>
-
-</head>
+    <div id="menu">
+        <div id="menu-items">
+            <a href="projects.html" class="menu-item">  Projects  </a>
+            <a href="/" class="menu-item">  About  </a>
+            <a href="/" class="menu-item">  Extra  </a>
+        </div>
+    </div>
+</body>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h1 class="section-title">My GitHub Projects</h1>
+        <ul id="project-list" class="project-list">
+            <!-- GitHub projects will be inserted here -->
+        </ul>
+    </section>
+    <script src="script.js"></script>
+</body>
 </html>
