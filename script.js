@@ -1,3 +1,9 @@
+window.addEventListener('pageshow', (event) => {
+    if (event.persisted) {
+        window.location.reload();
+    }
+});
+
 document.addEventListener('mousemove', (e) => { //move background on mouse movement
     const { clientX: x, clientY: y } = e;
     const backgroundPattern = document.getElementById('menu-background-pattern');
@@ -7,6 +13,7 @@ document.addEventListener('mousemove', (e) => { //move background on mouse movem
 
     backgroundPattern.style.backgroundPosition = `${moveX}% ${moveY}%`;
 });
+
 document.addEventListener('DOMContentLoaded', () => {
     const repoList = document.getElementById('project-list');
 
@@ -30,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error fetching repositories:', error));
 });
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -38,6 +46,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
 document.addEventListener('scroll', () => { //gradient
     const scrollPosition = window.scrollY;
     const docHeight = document.body.scrollHeight - window.innerHeight;
@@ -61,18 +70,12 @@ document.addEventListener('scroll', () => { //gradient
 
     document.body.style.background = `linear-gradient(0deg, rgb(${firstTransitionColor.r}, ${firstTransitionColor.g}, ${firstTransitionColor.b}), rgb(${secondTransitionColor.r}, ${secondTransitionColor.g}, ${secondTransitionColor.b}))`;
 });
-document.querySelectorAll('a.menu-item').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const url = this.getAttribute('href');
 
-        fetch(url)
-            .then(response => response.text())
-            .then(html => {
-                document.body.innerHTML = html;
-                window.history.pushState({}, '', url);
-            })
-            .catch(error => console.error('Error loading page:', error));
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
 });
