@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<body>
+    <div id="info-items">
+        <h1>About Me</h1>
+        <p>
+            Computer Engineering undergraduate student at Carleton University.
+        </p>
+    </div>
+<script>
+  window.onpageshow = function(event) {
+    if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+        window.location.reload();
+    }
+  };
+</script>
+</body>
+</html>

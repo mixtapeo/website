@@ -1,13 +1,13 @@
 /* General body styles */
 body {
-    background: linear-gradient(0deg, #1a1a1a, #333333);
-    background-attachment: fixed;
+    background: linear-gradient(0deg, rgb(80, 80, 160), rgb(80, 80, 160)); /* Initial background gradient */
+    background-attachment: fixed; /* Background stays fixed while scrolling */
     margin: 0;
     font-family: "Ibarra Times Nova", serif;
-    color: white;
-    overflow-x: hidden;
-    transition: background 0.2s ease-in-out;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    transition: background 0.5s ease-in-out; /* Smooth background transition */
 }
+
 
 /* Menu styles */
 #menu {
@@ -17,42 +17,43 @@ body {
     justify-content: center;
 }
 
+/* Menu item styles */
 .menu-item {
     color: rgba(255, 255, 255, 0.541);
-    font-size: clamp(3rem, 8vw, 8rem);
+    font-size: clamp(3rem, 8vw, 8rem); /* Responsive font size */
     text-decoration: none;
-    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
-    transition: color 0.3s ease;
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem; /* Responsive padding */
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .menu-item:hover {
-    color: #594545;
+    color: #594545; /* Hover color */
 }
 
+/* Positioning menu items */
 #menu-items {
-    margin-left: clamp(4rem, 20vw, 48rem);
+    margin-left: clamp(4rem, 20vw, 48rem); /* Responsive margin */
     position: relative;
-    z-index: 2;
+    z-index: 2; /* Ensure it appears above other content */
 }
 
-/* Background pattern */
+/* Background pattern for the menu */
 #menu-background-pattern {
     height: 100vh;
     width: 100vw;
-    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 9%, transparent 9%);
-    background-position: 0% 0%;
-    background-size: 12vmin 12vmin;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 9%, transparent 9%); /* Radial gradient pattern */
+    background-position: 0% 0%; /* Initial background position */
+    background-size: 12vmin 12vmin; /* Responsive background size */
     position: absolute;
     left: 0px;
     top: 0px;
-    z-index: 1;
-    transition: background-position 0.1s ease-out;
+    z-index: 1; /* Place it behind other content */
 }
 
 /* Section styles */
 .section {
     padding: 4rem;
-    background-color: #9E7676;
+    background-color: #9E7676; /* Section background color */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -60,15 +61,17 @@ body {
     justify-content: center;
 }
 
+/* Section title styles */
 .section-title {
-    font-size: clamp(2rem, 4vw, 4rem);
+    font-size: clamp(2rem, 4vw, 4rem); /* Responsive font size */
     margin-bottom: 2rem;
-    color: #FFF8EA;
-	font-family: 'Trebuchet MS';
+    color: #FFF8EA; /* Light text color */
+    font-family: 'Trebuchet MS'; /* Font family */
 }
 
+/* Project list styles */
 .project-list {
-    list-style-type: none;
+    list-style-type: none; /* Remove bullet points */
     padding: 0;
     margin: 0;
     display: flex;
@@ -76,33 +79,35 @@ body {
     align-items: center;
 }
 
+/* Project list item styles */
 .project-list li {
     margin-bottom: 1.5rem;
     width: 100%;
-    max-width: 800px;
+    max-width: 800px; /* Maximum width */
 }
 
+/* Project list link styles */
 .project-list a {
-    color: white;
-    text-decoration: none;
-    font-size: clamp(1rem, 2vw, 2rem);
+    color: white; /* Link text color */
+    text-decoration: none; /* Remove underline */
+    font-size: clamp(1rem, 2vw, 2rem); /* Responsive font size */
     padding: 1rem;
-    background-color: #333;
+    background-color: #333; /* Background color */
     display: block;
     text-align: center;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
 }
 
 .project-list a:hover {
-    background-color: #444;
-    transform: translateY(-5px);
+    background-color: #444; /* Darker background on hover */
+    transform: translateY(-5px); /* Lift up effect */
 }
 
 /* Fade In Effect */
 body {
     opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
+    animation: fadeIn 1s ease-in-out forwards; /* Fade in animation */
 }
 
 @keyframes fadeIn {
@@ -113,38 +118,38 @@ body {
 
 /* Smooth transition for links */
 a {
-    transition: color 0.3s ease, opacity 0.3s ease;
+    transition: color 0.3s ease, opacity 0.3s ease; /* Smooth transition for links */
 }
 
 a:hover {
-    opacity: 0.8;
+    opacity: 0.8; /* Slight fade on hover */
 }
 
-/* Add a black background color to the top navigation */
+/* Navigation styles */
 .topnav {
-    background-color: #333;
+    background-color: #333; /* Dark background for navigation */
     overflow: hidden;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
+}
+
+/* Navigation link styles */
+.topnav a {
     float: left;
-    color: #FFF8EA;
+    color: #FFF8EA; /* Light text color */
     text-align: center;
     padding: 14px 14px;
     text-decoration: none;
     font-size: 18px;
-	font-family: 'Trebuchet MS';
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #9E7676;
+    font-family: 'Trebuchet MS'; /* Font family */
+}
+
+/* Hover state for navigation links */
+.topnav a:hover {
+    background-color: #9E7676; /* Background color on hover */
     color: black;
-  }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #815B5B;
-    color: rgb(165, 165, 165);
-  }
+}
+
+/* Active/current navigation link */
+.topnav a.active {
+    background-color: #815B5B; /* Active link background */
+    color: rgb(165, 165, 165); /* Active link text color */
+}
