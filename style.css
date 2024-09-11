@@ -53,7 +53,6 @@ body {
 /* Section styles */
 .section {
     padding: 4rem;
-    background-color: #9E7676; /* Section background color */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -153,3 +152,11 @@ a:hover {
     background-color: #815B5B; /* Active link background */
     color: rgb(165, 165, 165); /* Active link text color */
 }
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 4% 0;
+    color: white;
+  }
