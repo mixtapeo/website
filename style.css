@@ -160,3 +160,31 @@ a:hover {
     margin: 4% 0;
     color: white;
   }
+
+#contact-info{
+    font-size: 20px;
+    text-align: center;
+}
+
+#info-items {
+    background-color: #f4f4f4;  /* Light gray background for readability */
+    padding: 20px;              /* Add some padding for spacing */
+    border-radius: 10px;         /* Rounded corners for a smooth look */
+    max-width: 800px;            /* Limit the width for better readability */
+    margin: 0 auto;              /* Center the content on the page */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+    font-family: 'Arial', sans-serif;  /* Clean, professional font */
+    line-height: 1.6;            /* Improved readability by spacing lines */
+    color: #333;                 /* Dark gray text for better contrast */
+}
+
+#info-items h2 {
+    font-size: 28px;             /* Make the name stand out */
+    color: #2c3e50;              /* Darker color for contrast */
+    margin-bottom: 10px;         /* Space between the heading and text */
+}
+
+#info-items p {
+    font-size: 18px;             /* Slightly larger text for better readability */
+    margin-bottom: 15px;         /* Space between paragraphs */
+}
