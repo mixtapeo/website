@@ -22,8 +22,9 @@ body {
     color: rgba(255, 255, 255, 0.541);
     font-size: clamp(3rem, 8vw, 8rem); /* Responsive font size */
     text-decoration: none;
-    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem; /* Responsive padding */
+    padding: 15px 15px; /* Responsive padding */
     transition: color 0.3s ease; /* Smooth color transition */
+    
 }
 
 .menu-item:hover {
@@ -115,6 +116,13 @@ body {
     }
 }
 
+.WIPbar{
+    position: fixed;
+    top: 0%;
+    color: yellow;
+    font-size: 12px;
+}
+
 /* Smooth transition for links */
 a {
     transition: color 0.3s ease, opacity 0.3s ease; /* Smooth transition for links */
@@ -124,14 +132,15 @@ a:hover {
     opacity: 0.8; /* Slight fade on hover */
 }
 
-/* Navigation styles */
-.topnav {
-    background-color: #333; /* Dark background for navigation */
-    overflow: hidden;
+.topnav{
+    visibility: hidden;
 }
 
 /* Navigation link styles */
-.topnav a {
+.ActivateTopnav{
+    visibility: visible;
+    background-color: #333; /* Dark background for navigation */
+    overflow: hidden;
     float: left;
     color: #FFF8EA; /* Light text color */
     text-align: center;
@@ -139,6 +148,7 @@ a:hover {
     text-decoration: none;
     font-size: 18px;
     font-family: 'Trebuchet MS'; /* Font family */
+    position: fixed;
 }
 
 /* Hover state for navigation links */
@@ -151,6 +161,13 @@ a:hover {
 .topnav a.active {
     background-color: #815B5B; /* Active link background */
     color: rgb(165, 165, 165); /* Active link text color */
+}
+
+.topnav-item{
+    color: rgba(255, 255, 255, 0.614);
+    text-decoration: none;
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem; /* Responsive padding */
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .boxes {

@@ -79,3 +79,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+window.addEventListener("scroll", function() { // To see if user went passed main menu, after which to display top nav bar
+    var elementTarget = document.getElementById("menu");
+    var topNavElement = document.querySelector('.topnav'); // Assuming this is the element you want to style
+    if (window.scrollY > (elementTarget.offsetTop + elementTarget.offsetHeight)) {
+        topNavElement.classList.add('ActivateTopnav');
+    } else {
+        topNavElement.classList.remove('ActivateTopnav');
+    }
+});
